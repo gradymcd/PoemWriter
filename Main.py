@@ -22,35 +22,29 @@ for word, tag in tags:
     if tag in ["JJ", "JJR", "JJS"]:
         pos["adjectives"].append(word)
 
+repeat = "I am " + random.choice(pos["adjectives"]) + " and " + random.choice(pos["adjectives"])
+lines = [
+    repeat,
+    "I wonder " + random.choice(pos["verbs"]),
+    "I hear " + random.choice(pos["nouns"]),
+    "I see " + random.choice(pos["nouns"]),
+    "I want " + random.choice(pos["nouns"]),
+    repeat,
+    "",
+    "I pretend " + random.choice(pos["verbs"]),
+    "I feel " + random.choice(pos["verbs"]),
+    "I touch " + random.choice(pos["nouns"]),
+    "I worry when I " + random.choice(pos["verbs"]),
+    "I cry when " + random.choice(pos["verbs"]),
+    repeat,
+    "",
+    "I understand " + random.choice(pos["verbs"]),
+    "I say " + random.choice(pos["verbs"]),
+    "I dream of " + random.choice(pos["verbs"]),
+    "I try to " + random.choice(pos["verbs"]),
+    "I hope I " + random.choice(pos["verbs"]),
+    repeat,
+]
 
-type = "i am"
-
-if type=="i am":
-    repeat = "I am " + random.choice(pos["adjectives"]) + " and " + random.choice(pos["adjectives"])
-    lines = [
-        repeat,
-        "I wonder " + random.choice(pos["verbs"]),
-        "I hear " + random.choice(pos["nouns"]),
-        "I see " + random.choice(pos["nouns"]),
-        "I want " + random.choice(pos["nouns"]),
-        repeat,
-        "",
-        "I pretend " + random.choice(pos["verbs"]),
-        "I feel " + random.choice(pos["verbs"]),
-        "I touch " + random.choice(pos["nouns"]),
-        "I worry when I " + random.choice(pos["verbs"]),
-        "I cry when " + random.choice(pos["verbs"]),
-        repeat,
-        "",
-        "I understand " + random.choice(pos["verbs"]),
-        "I say " + random.choice(pos["verbs"]),
-        "I dream of " + random.choice(pos["verbs"]),
-        "I try to " + random.choice(pos["verbs"]),
-        "I hope I " + random.choice(pos["verbs"]),
-        repeat,
-    ]
-
-    for line in lines:
-        print(line)
-
-#print (random.choice(nouns), random.choice(s_verbs), random.choice(s_nouns).lower()))
+for line in lines:
+    print(line)
